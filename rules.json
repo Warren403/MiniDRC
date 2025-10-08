@@ -1,0 +1,42 @@
+{                                    
+  "units": "nm",
+  "layers": ["M1", "M2", "M3", "POLY", "CONT", "VIA12", "VIA23"],
+  
+  "min_spacing": {
+    "M1": 40,
+    "M2": 60,
+    "M3": 80
+  },
+
+  "min_width": {
+    "M1": 30,
+    "M2": 40,
+    "M3": 50
+  },
+  
+  "via_enclosure": {                                                        
+    "CONT":  { "under": "POLY", "over": "M1", "min_enclose": 10 },
+    "VIA12": {"under": "M1", "over": "M2", "min_enclose": 10},
+    "VIA23": { "under": "M2",   "over": "M3", "min_enclose": 10 }       
+  },
+
+  "density_check": {       
+    "window_size": 100,    
+    "min_density": 0.3,
+    "layers": ["M1","M2","M3","POLY"]      
+  },                        
+                         
+  "layer_mapping": {
+  "M1": 1,
+  "M2": 2,
+  "VIA12": 3
+  },
+
+  "max_width": {
+  "M1": 120,
+  "M2": 160,
+  "M3": 200
+  }
+
+
+}
